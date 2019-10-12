@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseDragged="#formDragged" onMousePressed="#formPressed" prefHeight="435.0" prefWidth="400.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="81.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <top>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="close_button" focusTraversable="false" mnemonicParsing="false" onAction="#closeAction" prefHeight="34.0" prefWidth="34.0" text="X" textFill="#000000cc" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label text="Информация о бюджете" textFill="#000000cc" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="Times New Roman" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="100.0" />
+               </BorderPane.margin>
+               <children>
+                  <Button fx:id="cancel_button" focusTraversable="false" layoutX="232.0" layoutY="127.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="35.0" prefWidth="120.0" text="ОТМЕНА" textFill="#606060" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="default_button" defaultButton="true" focusTraversable="false" layoutX="115.0" layoutY="130.0" mnemonicParsing="false" onAction="#applyAction" prefHeight="35.0" prefWidth="150.0" text="ПРИМЕНИТЬ" textFill="#8f5a0a" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutY="6.0" text="Доход за аренду помещения:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="area" layoutY="28.0" prefHeight="40.0" prefWidth="120.0" promptText="Площадь в кв.м." AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="35.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="priceArea" layoutX="118.0" layoutY="41.0" prefHeight="40.0" promptText="Цена за кв.м." AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="35.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="6.0" layoutY="75.0" text="Потребление электроэнергии:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="85.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="consumption" layoutX="6.0" layoutY="103.0" prefHeight="40.0" prefWidth="120.0" promptText="кВт·ч" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="110.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="priceCunsumption" layoutX="145.0" layoutY="107.0" prefHeight="40.0" promptText="Цена за кВт·ч" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="110.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="6.0" layoutY="150.0" text="Плата за ком. услуги:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="160.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="priceServices" layoutX="-1.0" layoutY="178.0" prefHeight="40.0" promptText="Сумма затрат за ком. услуги" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="185.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <AnchorPane prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #eee;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="39.0">
+         <effect>
+            <InnerShadow color="#000000cc" />
+         </effect>
+         <children>
+            <Label fx:id="userInfo" layoutY="6.0" textFill="#000000cc" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="35.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Прибыль" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="profit" text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Последний визит:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="last" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

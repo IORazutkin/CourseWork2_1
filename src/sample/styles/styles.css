@@ -1,0 +1,125 @@
+.root {
+    -fx-background-color: linear-gradient(#fff,#eee);
+}
+TextField, PasswordField {
+    -fx-background-color: #f1f1f1;
+    -fx-border-color: #777;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-prompt-text-fill: #000000aa;
+    -fx-effect: InnerShadow(three-pass-box, #000000cc, 10.0, 0, 0, 0);
+    -fx-cursor: text;
+}
+
+TextField:focused, PasswordField:focused {
+    -fx-background-color: #fff;
+    -fx-border-color: #e8c291;
+    -fx-effect: InnerShadow(three-pass-box, #e8c291cc, 10.0, 0, 0, 0);
+}
+
+.log_pas-err {
+    -fx-background-color: #ffeeee;
+    -fx-border-color: #ff5555;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-prompt-text-fill: #ff0000aa;
+    -fx-effect: InnerShadow(three-pass-box, #ff0000cc, 10.0, 0, 0, 0);
+    -fx-cursor: text;
+}
+
+BorderPane {
+    -fx-border-color: #0000009a;
+    -fx-border-style: dashed;
+}
+
+#close_button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-style: dashed;
+    -fx-border-width: 0 0 1 1;
+}
+#close_button:hover {
+    -fx-border-color: #0000009a;
+}
+#close_button:pressed {
+    -fx-text-fill: #000;
+    -fx-background-color: #00000019;
+}
+#default_button {
+    -fx-background-color: linear-gradient(#fddb6f, #ffb94b);
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-border-color: #d69e31 #e3a037 #d5982d #e3a037;
+}
+#default_button:hover {
+    -fx-background-color: linear-gradient(#ffb94b, #fddb6f);
+}
+#default_button:pressed {
+    -fx-effect: innershadow(one-pass-box, #000000b2, 10, 0, 0, 1);
+    -fx-font-weight: bold;
+    -fx-padding: 2 0 0 0;
+}
+#registration_button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3151a2;
+    -fx-underline: true;
+}
+#registration_button:hover {
+    -fx-cursor: hand;
+}
+#registration_button:pressed {
+    -fx-text-fill: #7731a0;
+}
+#cancel_button {
+    -fx-background-color: linear-gradient(#fff, #ccc);
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-border-color: #999;
+}
+#cancel_button:hover {
+    -fx-background-color: linear-gradient(#ccc, #fff);
+}
+#cancel_button:pressed {
+    -fx-effect: innershadow(one-pass-box, #000000b2, 10, 0, 0, 1);
+    -fx-font-weight: bold;
+    -fx-padding: 2 0 0 0;
+}
+
+.combo-box {
+    -fx-background-color: #f1f1f1;
+    -fx-border-color: #777;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: InnerShadow(three-pass-box, #000000cc, 10.0, 0, 0, 0);
+}
+.combo-box:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.combo-box-popup > .list-view {
+    -fx-background-color: #f1f1f1;
+    -fx-border-color: #777;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.list-cell:hover {
+    -fx-background-color: #00000010;
+    -fx-text-fill: #000;
+}
+.list-cell:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000;
+}
+.table-view .column-header {
+    -fx-background-color: linear-gradient(#fff, #ccc);
+    -fx-border-color: #777;
+    -fx-border-width: 0 1 1 0;
+    -fx-effect: InnerShadow(one-pass-box, #000000cc, 10.0, 0, 0, 0);
+}
+.table-view {
+    -fx-background-color: #00000010;
+    -fx-border-style: dashed;
+    -fx-border-color:  #0000009a;
+    -fx-border-width: 1 0 0 0;
+}
